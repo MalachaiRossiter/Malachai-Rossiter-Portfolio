@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    font-family: "Lato",sans-serif;
+} 
+
+h1{
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+}
+
+.heroContainer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./Images/NeonCity.jpg");
+    background-size: cover;
+    background-position: fixed;
+}
+
+.heroContainer span{
+    color: rgb(253, 91, 91)
+}
+
+.heroContainer button{
+    padding: 12px 48px;
+    font-size: 32px;
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.arrow {
+    margin-left: 24px;
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 6px;
+} 
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
