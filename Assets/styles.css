@@ -3,6 +3,8 @@ body{
     font-family: "Lato",sans-serif;
 } 
 
+/* Hero Section */
+
 h1{
     color: #fff;
     font-size: 60px;
@@ -13,13 +15,20 @@ h1{
 .heroContainer{
     height: 100vh;
     width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("./Images/NeonCity.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("./Images/Image\ 2.png");
     background-size: cover;
-    background-position: fixed;
+
+}
+
+.heroContainer img{
+    object-fit: cover;
+    filter: blur(3px);
+    filter: brightness(50%);
 }
 
 .heroContainer span{
@@ -32,6 +41,7 @@ h1{
     color: #fff;
     background-color: transparent;
     border-color: #fff;
+    transition: .25s ease-in;
 }
 
 .arrow {
@@ -45,4 +55,9 @@ h1{
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+
+button:hover{
+    background-color:rgb(253, 91, 91);
+    border-color:rgb(253, 91, 91);
 }
