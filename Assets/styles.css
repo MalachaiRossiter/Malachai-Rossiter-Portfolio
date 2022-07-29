@@ -1,8 +1,13 @@
-body{
-    margin: 0;
-    font-family: "Lato",sans-serif;
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: "Lato",Arial, Helvetica, sans-serif;
 } 
 
+body{
+    background-color: rgb(8, 8, 8);
+}
 /* Hero Section */
 
 h1{
@@ -35,29 +40,76 @@ h1{
     color: rgb(253, 91, 91)
 }
 
-.heroContainer button{
-    padding: 12px 48px;
-    font-size: 32px;
-    color: #fff;
-    background-color: transparent;
-    border-color: #fff;
-    transition: .25s ease-in;
+/* The pain that is a button */
+
+.MajorButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+    padding: 20px 60px;
+    Margin: 32px;
+    color:rgb(253, 91, 91);
+    background-color: #111;
+    transition: .5s ease-in-out;
 }
 
-.arrow {
-    margin-left: 24px;
-    border: solid #fff;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 6px;
+.MajorButton::before, .MajorButton::after {
+    content:"";
+    border: 3px solid #fff;
+    position: absolute;
+    height: calc(100% - 6px);
+    width: calc(100% - 6px);
+    transition: transform .5s ease-in-out;
+}
+
+.MajorButton:hover{
+    color: #fff;
+    background-color:rgb(253, 91, 91)
+}
+
+.MajorButton:hover::after{
+    transform: translate(-3px, -3px);
+}
+
+.MajorButton:hover::before{
+    transform: translate(3px, 3px);
 } 
 
-.right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+.navcontainer{
+    height: 5vh;
+    width: 95%;
+    margin: 0 auto;
 }
 
-button:hover{
-    background-color:rgb(253, 91, 91);
-    border-color:rgb(253, 91, 91);
+.navbar{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    
+}
+
+.navitem{
+    margin-left: 20px;
+    font-size: 24px;
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    transition:  .5s ease-in;
+}
+
+.logocontainer{
+    margin-right: auto;
+}
+
+.logo{
+    object-fit: cover;
+    height: 60px;
+}
+
+.navitem:hover{
+    color:rgb(253, 91, 91);
 }
