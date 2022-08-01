@@ -7,7 +7,7 @@ color:#fff;
 } 
 
 body{
-    background-color: rgb(8, 8, 8);
+    background-color: rgb(26,25,29);
 }
 
 h1{
@@ -16,9 +16,9 @@ h1{
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
 }
 
-h3{
+h3, h2{
     color: #fff;
-    font-size: 32px;
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
 }
 
 p{
@@ -30,6 +30,7 @@ p{
 
 .heroContainer h1{
     text-align: center;
+    font-size: 80px;
 }
 
 .heroContainer{
@@ -61,7 +62,7 @@ p{
     padding: 20px 60px;
     Margin: 32px;
     color:rgb(253, 91, 91);
-    background-color: #111;
+    background-color: rgb(26,25,29);
     transition: .5s ease-in-out;
 }
 
@@ -91,7 +92,7 @@ p{
 
 .navcontainer{
     height: 5vh;
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
     position: sticky;
     top: 0;
@@ -131,8 +132,12 @@ p{
 
 .skillscontainer{
     width: 80%;
-    margin: 48px auto 0px auto;
+    margin: 120px auto 120px auto;
     padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .row{
@@ -174,4 +179,81 @@ p{
 #game{
     display: inline-block;
     border-bottom: 3px solid rgb(253, 91, 91);
+}
+
+/* works section */
+
+.workscontainer{
+    width: 80%;
+    margin: 60px auto 60px auto;
+}
+
+.worksrow{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.workscolumn{
+    flex: 1;
+    margin: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.01);
+}
+
+.cardimg {
+    object-fit: cover;
+}
+
+.cardcontainer{
+    padding: 20px;
+    height: 200px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cardcontainer h2{
+    font-size: 32px;
+}
+
+/* contact Section */
+
+.contact{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("./Images/Alleyway.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contactcontainer{
+    width: 80%;
+    margin: 120px auto 0 auto;
+    padding: 60px;
+}
+
+.h2contactpage{
+    padding-bottom: 20px;
+    color:rgb(253, 91, 91);
+}
+
+.contactpage{
+    padding-bottom: 20px;
+}
+
+.linkitem{
+    object-fit: cover;
+    margin-right: 20px;
+    transition: 0.3s;
+    filter: grayscale(100%);
+}
+
+.linkitem:hover{
+    filter: grayscale(0%);
 }
