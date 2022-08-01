@@ -4,6 +4,7 @@ margin: 0;
 padding: 0;
 font-family: "Lato",Arial, Helvetica, sans-serif;
 color:#fff;
+cursor: none;
 } 
 
 
@@ -175,12 +176,12 @@ p{
 
 #software{
     display: inline-block;
-    border-bottom: 3px solid rgb(253, 91, 91);
+    border-bottom: 3px solid rgb(91, 253, 126);
 }
 
 #game{
     display: inline-block;
-    border-bottom: 3px solid rgb(253, 91, 91);
+    border-bottom: 3px solid rgb(91, 253, 239);
 }
 
 /* works section */
@@ -258,4 +259,33 @@ p{
 
 .linkitem:hover{
     filter: grayscale(0%);
+}
+
+/* styling cursor */
+
+.cursor{
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+}
+
+.cursor-follow{
+    width: 21px;
+    height: 21px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    pointer-events: none;
+}
+
+/* Copied email notification */
+#copiedEmail{
+    display: none;
+    padding-top: 20px;
+    border-bottom: 3px solid rgb(91, 253, 126)
 }

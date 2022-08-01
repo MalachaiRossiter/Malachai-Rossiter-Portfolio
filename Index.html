@@ -13,7 +13,7 @@
     <!-- Hero Section -->
     <div class="heroContainer">
         <h1>Hai! I'm <span>Malachai Rossiter</span>.<br>I'm a full-stack web developer</h1>
-        <a href="#" class="MajorButton">Learn More</a>
+        <a class="MajorButton" href="#" >Learn More</a>
     </div>
 
     <!-- navbar sticky to top 0 -->
@@ -106,16 +106,19 @@
             <div class="workscolumn">
                 <h2 class="h2contactpage">Contact me</h2>
                 <div class="linkcollection">
-                    <a class="linkitem" href="https://github.com/MalachaiRossiter"><img src="./Assets/Images/gmailicon.png" alt="gmail"></a>
+                    <img class="linkitem" onmouseover="hoverEvent()" onclick="copyClipboard()" src="./Assets/Images/gmailicon.png" alt="gmail"></a>
                     <a class="linkitem" href="https://github.com/MalachaiRossiter"><img src="./Assets/Images/githubicon.png" alt="github"></a>
                     <a class="linkitem" href="https://www.linkedin.com/in/malachai-rossiter-46639923a/"><img src="./Assets/Images/linkedinicon.png" alt="linkedin"></a>
                     <a class="linkitem" href="https://www.youtube.com/channel/UCkKLrp8d_z2HkoORbEK1mvQ"><img src="./Assets/Images/youtubeicon.png" alt="youtube"></a>
                 </div>
+                <p id="copiedEmail">Copied email to clipboard!</p>
             </div>
         </div>
     </div>
 
-    
+    <div class="cursor"></div>
+    <div class="cursor-follow" id="cursor-follow"></div>
+    <script src="./Assets/script.js"></script>
 </div>
 </body>
 </html>
