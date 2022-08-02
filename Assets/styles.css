@@ -5,6 +5,7 @@ padding: 0;
 font-family: "Lato",Arial, Helvetica, sans-serif;
 color:#fff;
 cursor: none;
+scroll-behavior: smooth;
 } 
 
 
@@ -39,14 +40,21 @@ p{
 .heroContainer{
     height: 100vh;
     width: 100%;
-    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("./Images/Image\ 2.png");
     background-size: cover;
     background-attachment: fixed;
+}
+
+.heroContent{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .heroContainer span{
@@ -91,51 +99,142 @@ p{
     transform: translate(3px, 3px);
 } 
 
+/* resizing for different screens */
+@media only screen and (max-width: 1400px){
+    .heroContainer h1{
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .heroContainer h1{
+        font-size: 48px;
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+    .heroContainer{
+        height: 60vh;
+    }
+    .heroContainer h1{
+        font-size: 24px;
+    }
+
+    .MajorButton{
+        font-size: 16px;
+        padding: 15px 45px;
+    }
+}
+
+
+
+
+
 /* Navbar */
 
 .navcontainer{
-    height: 5vh;
-    width: 80%;
-    margin: 0 auto;
     position: sticky;
     top: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 5;
 }
 
-.navbar{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    border-bottom: 1px solid rgb(158, 158, 158);
-    backdrop-filter: blur(5px);
+.navbar li{
+    list-style: none;
 }
 
-.navitem{
-    margin: 0 24px;
-    font-size: 24px;
-    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+.navitem a{
+    color: #fff;
     text-decoration: none;
-    color: white;
-    transition:  .5s ease-in;
-}
-
-.logocontainer{
-    margin-right: auto;
 }
 
 .logo{
-    object-fit: cover;
-    height: 80px;
+    width: 80px;
 }
 
-.navitem:hover{
+.navbar{
+    width: 75%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.navmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.navlink{
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.navlink:hover{
     color:rgb(253, 91, 91);
+}
+
+.hamburger{
+    display:none;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 900px){
+    .hamburger{
+        display:block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .navmenu{
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.75);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        border-bottom: 1px solid #fff;
+
+    }
+
+    .navitem{
+        margin: 16px 0;
+    }
+
+    .navmenu.active{
+        left: 0;
+    }
 }
 
 /* skills section */
 
 .skillscontainer{
     width: 80%;
-    margin: 120px auto 120px auto;
+    margin: 120px auto 0 auto;
     padding: 60px;
     display: flex;
     flex-direction: column;
@@ -183,51 +282,144 @@ p{
     display: inline-block;
     border-bottom: 3px solid rgb(91, 253, 239);
 }
+/* Media Query stuff */
+@media only screen and (max-width: 1875px){
+    .skillscontainer h1{
+        font-size: 48px;
+    }
+}
+@media only screen and (max-width: 1525px){
+    .skillscontainer{
+        width: 90%;
+    }
+    .skillscontainer h1{
+        font-size: 40px;
+    }
+    .column{
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .column p{
+        font-size: 20px;
+    }
+    .column img{
+        width: 30px;
+    }
+    .row h3{
+        margin-left: 8px;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .skillscontainer{
+        width: 90%;
+    }
+    .skillscontainer h1{
+        font-size: 32px;
+    }
+    .row{
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .column{
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 975px){
+    .skillscontainer{
+        width: 90%;
+        padding: 30px;
+    }
+    .skillscontainer h1{
+        font-size: 24px;
+        text-align: center;
+    }
+}
 
+@media only screen and (max-width: 800px){
+    .skillscontainer{
+        width: 100%;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+}
 /* works section */
+.works{
+    width: 80%;
+    margin: 180px auto 60px auto;
+}
 
 .workscontainer{
-    width: 80%;
-    margin: 60px auto 60px auto;
-}
-
-.worksrow{
-    margin-top: 32px;
     display: flex;
     justify-content: center;
-}
-
-.workscolumn{
-    flex: 1;
-    margin: 20px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .card{
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
+    display: grid;
+    grid-template-columns: 550px;
+    grid-template-rows: 500px;
+    grid-template-areas: "image" "text";
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    margin: 20px;
+}
+
+.cardimage{
+    grid-area: image;
+    background-image: url("./Images/Discord\ Bot\ Image.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardtext{
+    grid-area: text;
+    padding: 20px;
+    text-overflow: ellipsis;
 }
 
 .card:hover{
     transform: scale(1.01);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.cardimg {
-    object-fit: cover;
+@media only screen and (max-width: 1800px){
+    .card{
+        grid-template-columns: 450px;
+    }
 }
 
-.cardcontainer{
-    padding: 20px;
-    height: 200px;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.5);
+@media only screen and (max-width: 1500px){
+    .card{
+        grid-template-columns: 375px;
+        grid-template-rows: 400px;
+    }
 }
 
-.cardcontainer h2{
-    font-size: 32px;
-}
+@media only screen and (max-width: 1300px){
+    .works{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .works h1{
+        margin-bottom: 20px;
+    }
+    .workscontainer{
+        flex-direction: column;
+    }
+    .card{
+        grid-template-columns: auto;
+    }
 
+
+}
+@media only screen and (max-width: 900px){
+    .workscontainer{
+        width: 95%;
+    }
+}
 /* contact Section */
 
 .contact{
@@ -239,6 +431,17 @@ p{
     width: 80%;
     margin: 120px auto 0 auto;
     padding: 60px;
+}
+
+.worksrow{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.workscolumn{
+    flex: 1;
+    margin: 20px;
 }
 
 .h2contactpage{
@@ -263,7 +466,25 @@ p{
 .imglink{
     filter: grayscale(100%);
 }
-
+@media only screen and (max-width: 1400px){
+    .contactcontainer{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .worksrow{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 700px){
+    .contactcontainer{
+        width: 95%;
+        padding: 30px;
+    }
+    .contactcontainer p{
+        font-size: 20px;
+    }
+}
 /* styling cursor */
 
 .cursor{
@@ -273,6 +494,7 @@ p{
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
+    z-index: 10;
 }
 
 .cursor-follow{
@@ -284,6 +506,13 @@ p{
     transition-duration: 100ms;
     transition-timing-function: ease-out;
     pointer-events: none;
+    z-index: 10;
+}
+
+.red {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgb(255, 0, 0);
 }
 
 /* Copied email notification */
@@ -291,10 +520,4 @@ p{
     display: none;
     padding-top: 20px;
     border-bottom: 3px solid rgb(91, 253, 126)
-}
-
-.red {
-    width: 42px;
-    height: 42px;
-    border: 1px solid rgb(253, 91, 91);
 }
