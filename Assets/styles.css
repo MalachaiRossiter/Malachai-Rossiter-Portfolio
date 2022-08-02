@@ -368,7 +368,6 @@ p{
 
 .cardimage{
     grid-area: image;
-    background-image: url("./Images/Discord\ Bot\ Image.png");
     background-size: cover;
     background-position: center;
 }
@@ -382,6 +381,28 @@ p{
 .card:hover{
     transform: scale(1.01);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#color1{
+    color: rgb(253, 91, 91);
+}
+#color2{
+    color: rgb(91, 253, 126);
+}
+#color3{
+    color: rgb(91, 253, 239);
+}
+
+.img1{
+    background-image: url("./Images/Discord\ Bot\ Image.png");
+}
+
+.img2{
+    background-image: url("./Images/gallery.jpg");
+}
+
+.img3{
+    background-image: url("./Images/Spotify.jpg");
 }
 
 @media only screen and (max-width: 1800px){
