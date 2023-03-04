@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Malachai-Rossiter-Portfolio/static/css/main.4d8ca29a.css",
+    "main.js": "/Malachai-Rossiter-Portfolio/static/js/main.1123d81e.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Malachai-Rossiter-Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/Image 2.png": "/Malachai-Rossiter-Portfolio/static/media/Image 2.2a594b0c985ac2c2745f.png",
+    "static/media/LukejanMetals.png": "/Malachai-Rossiter-Portfolio/static/media/LukejanMetals.f415d4f14de9713cda54.png",
+    "static/media/GroupDocs.png": "/Malachai-Rossiter-Portfolio/static/media/GroupDocs.68963f94c4f596c221e0.png",
+    "static/media/DevBlog.png": "/Malachai-Rossiter-Portfolio/static/media/DevBlog.c3218c29589a89e2ac6e.png",
+    "static/media/Alleyway.jpg": "/Malachai-Rossiter-Portfolio/static/media/Alleyway.b99b2a7114f78ece31a5.jpg",
+    "index.html": "/Malachai-Rossiter-Portfolio/index.html",
+    "main.4d8ca29a.css.map": "/Malachai-Rossiter-Portfolio/static/css/main.4d8ca29a.css.map",
+    "main.1123d81e.js.map": "/Malachai-Rossiter-Portfolio/static/js/main.1123d81e.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Malachai-Rossiter-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d8ca29a.css",
+    "static/js/main.1123d81e.js"
+  ]
+}
